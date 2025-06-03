@@ -1,15 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Daisy UI CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <!-- FontAwesome CDN -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-dP6ryr3Gxu0bWyJzJ5i4YfO+BmoC43VP3g4UFXF2z3nznSH7aHX0aQClOB2EX1DPWWtKqzjf5hlB4yjF4ZlTXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Payoo MObile App</title>
+  </head>
+  <body>
+    <section class="bg-gray-100">
+      <!-- full mobile screen  -->
+      <div
+        class="flex flex-col max-w-sm mx-auto min-h-screen bg-white shadow-md"
+      >
+        <!-- Header with logo -->
+        <div class="pt-10 flex justify-center items-center">
+          <div>
+            <img class="w-16" src="images/payoo.png" alt="" />
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold text-sky-700">Payoo Mobile APP</h3>
+          </div>
+        </div>
+
+        <!-- content -->
+        <div
+          id="loginPage"
+          class="absolute bottom-16 relative h-screen flex flex-col items-center justify-center h-screen p-6"
+        >
+          <!-- Background Logo (blurred and behind) -->
+          <div
+            class="absolute w-11/12 h-140 bg-cover bg-center z-0 "
+            style="
+              background-image: url('images/payoo.png');
+              mask-image: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0)
+              );
+              -webkit-mask-image: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0)
+              );
+             
+    "
+          ></div>
+
+          <!-- Foreground content -->
+          <div class="pt-7 z-10 w-full space-y-4">
+            <h3 class="font-semibold text-xl">Mobile Number</h3>
+            <input
+              type="text"
+              placeholder="Mobile Number"
+              class="input input-bordered w-full shadow-sm
+"
+            />
+            <h3 class="font-semibold text-xl">PIN</h3>
+            <input
+              type="password"
+              placeholder="4 Digit PIN"
+              class="input input-bordered w-full shadow-sm">
+            <button class="btn btn-primary w-full" onclick="login()">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
